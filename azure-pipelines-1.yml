@@ -19,7 +19,7 @@ jobs:
   - deployment: Deploy
     displayName: Deploy
     environment: 
-      name: TEST
+      name: dev
       resourceType: VirtualMachine
     strategy:
      runOnce:
