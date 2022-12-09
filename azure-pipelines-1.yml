@@ -19,7 +19,7 @@ jobs:
   - deployment: Deploy
     displayName: build VM
     environment: 
-      name: dev
+      name: stg
       resourceType: VirtualMachine
     strategy:
      runOnce:
