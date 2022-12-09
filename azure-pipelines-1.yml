@@ -25,13 +25,13 @@ jobs:
      runOnce:
        deploy:
         steps:
- #         - download: mybuid-pipeline
-#            artifact: drop
- #         - task: ExtractFiles@1
- #           inputs:
- #             archiveFilePatterns: '$(PIPELINE.WORKSPACE)/mybuild-pipeline/drop/$(resources.pipelines.mybuild-pipeline.runID).zip'
- #             destinationFolder: '$(agent.builddirectory)'
- #             cleanDestinationFolder: false
+          - download: mybuid-pipeline
+            artifact: drop
+          - task: ExtractFiles@1
+            inputs:
+              archiveFilePatterns: '$(PIPELINE.WORKSPACE)/mybuild-pipeline/drop/$(resources.pipelines.mybuild-pipeline.runID).zip'
+              destinationFolder: '$(agent.builddirectory)'
+              cleanDestinationFolder: false
           - script: |
                 Stop-Service -Name "CaptureService_1e29a17"
                 Stop-WebAppPool -Name "RightAngle21.0AppPool"
