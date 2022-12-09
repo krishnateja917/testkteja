@@ -22,6 +22,7 @@ jobs:
   - deployment: Deploy
     displayName: Deploy
     environment: TEST
+    resourceType: VirtualMachine
     strategy:
      runOnce:
        deploy:
