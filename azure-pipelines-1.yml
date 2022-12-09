@@ -21,8 +21,9 @@ pool:
 jobs:
   - deployment: Deploy
     displayName: Deploy
-    environment: TEST
-    resourceType: VirtualMachine
+    environment: 
+      name: TEST
+      resourceType: VirtualMachine
     strategy:
      runOnce:
        deploy:
