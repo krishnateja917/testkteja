@@ -14,12 +14,6 @@ steps:
 - script: echo Hello, world!
   displayName: 'Run a one-line script'
 
-- task: MSBuild@1
-  inputs:
-    solution: '**/*.sln'
-    platform: 'x64'
-    configuration: 'Release'
-
 - task: PublishBuildArtifacts@1
   inputs:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
