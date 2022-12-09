@@ -28,12 +28,13 @@ jobs:
      runOnce:
        deploy:
         steps:
-          - download: mybuid-pipeline
-            artifact: drop
-          - task: ExtractFiles@1
-            inputs:
-              archiveFilePatterns: '$(PIPELINE.WORKSPACE)/mybuild-pipeline/drop/$(resources.pipelines.mybuild-pipeline.runID).zip'
-              destinationFolder: '$(agent.builddirectory)'
-              cleanDestinationFolder: false
+ #         - download: mybuid-pipeline
+#            artifact: drop
+ #         - task: ExtractFiles@1
+ #           inputs:
+ #             archiveFilePatterns: '$(PIPELINE.WORKSPACE)/mybuild-pipeline/drop/$(resources.pipelines.mybuild-pipeline.runID).zip'
+ #             destinationFolder: '$(agent.builddirectory)'
+ #             cleanDestinationFolder: false
+          - script: echo "Hello world"
              
           
