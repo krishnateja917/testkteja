@@ -13,9 +13,10 @@ pool:
 steps:
 - script: echo Hello, world!
   displayName: 'Run a one-line script'
-- task: VSBuild@1
+
+- task: MSBuild@1
   inputs:
-    solution: '**\*.sln'
+    solution: '**/*.sln'
 - task: PublishBuildArtifacts@1
   inputs:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
