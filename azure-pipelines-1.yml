@@ -17,7 +17,7 @@ pool:
 
 jobs:
   - deployment: Deploy
-    displayName: Deploy
+    displayName: build VM
     environment: 
       name: dev
       resourceType: VirtualMachine
