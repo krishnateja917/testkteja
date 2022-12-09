@@ -32,6 +32,9 @@ jobs:
  #             archiveFilePatterns: '$(PIPELINE.WORKSPACE)/mybuild-pipeline/drop/$(resources.pipelines.mybuild-pipeline.runID).zip'
  #             destinationFolder: '$(agent.builddirectory)'
  #             cleanDestinationFolder: false
-          - script: echo "Hello world"
+          - script: |
+                Stop-Service -Name "CaptureService_1e29a17"
+                Stop-WebAppPool -Name "RightAngle21.0AppPool"
+                Copy-Item $(agent.builddirectory)/azure-pipelines.yml -Destination D:/
              
           
